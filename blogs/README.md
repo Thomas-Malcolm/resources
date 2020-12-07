@@ -12,6 +12,8 @@ Assorted blogs, blog posts and information websites
 
 [Exploiting SUID Executables](https://www.pentestpartners.com/security-blog/exploiting-suid-executables/)
 
+[Google's Project Zero](googleprojectzero.blogspot.com)
+
 ## Networking
 
 [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/#structs)
