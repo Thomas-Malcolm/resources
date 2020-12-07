@@ -4,4 +4,4 @@ Cool
 
 ## Security
 
-(Defcon Media Server)[media.defcon.org]
+[Defcon Media Server](media.defcon.org)
