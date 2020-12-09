@@ -24,6 +24,10 @@ Collection of websites with neat tools - useful for checking the work you're doi
 
 [Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
 
+[FFUF](github.com/ffuf/ffuf)
+
+`ffuf -c -w /usr/share/wordlists/dirs/directory-list-2.3-medium.txt -u https://squad.cyber.uq.edu.au/FUZZ`
+
 ## Reverse Engineering
 
 [Radare](https://rada.re/r/index.html)
