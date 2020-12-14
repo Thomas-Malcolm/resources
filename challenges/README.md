@@ -18,8 +18,15 @@ Websites hosting various challenges
 [Cryptopals](https://cryptopals.com/)
 
 ## CTFs
+
 [List of Practice CTFs](https://captf.com/practice-ctf/)
 [24/7 CTF](https://247ctf.com/)
+
+[BSides CTF](https://ctf.bsidesbrisbane.com)
+
+## Hardware
+
+[Rhme2016 - Arduino Challenges](github.com/Riscure/Rhme-2016)
 
 ## Misc
 
