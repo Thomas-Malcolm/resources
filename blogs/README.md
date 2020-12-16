@@ -1,6 +1,6 @@
 # Blogs
 
-Assorted blogs, blog posts and information websites
+Assorted blogs, magazines and general information websites
 
 ## Computer Science
 
@@ -21,6 +21,8 @@ Assorted blogs, blog posts and information websites
 [0xrick](https://0xrick.github.io/)
 
 [Phrack Magazine](http://phrack.org/)
+
+[2600 Magazine](2600.com)
 
 ## Hardware
 

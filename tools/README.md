@@ -1,32 +1,18 @@
 # Tools
 
-Collection of websites with neat tools - useful for checking the work you're doing is accurate. At least to the extent that someone else's work is accurate.
+Useful tools. For things. Sometimes with usage.
 
-## Regex
 
-[Regex Tester](https://www.regextester.com/)
 
-## Algorithms
+# Directory Bruteforcing
 
-[Sorting Algorithm Visualiser](http://sorting.at/)
+[Gobuster](github.com/OJ/gobuster)
 
-## Programming
-
-[x86/x64 Assembler and Disassembler](https://defuse.ca/online-x86-assembler.htm#disassembly2)
-
-## Security
-
-[Incidence Response Tool List](github.com/meriwah/awesome-incident-response)
-
-[APT Simulator](github.com/NextronSystems/APTSimulator)
-
-[GTFOBins](https://gtfobins.github.io/)
-
-[Payloads All The Things](https://github.com/swisskyrepo/PayloadsAllTheThings)
+`gobuster -w <wordlist> -u <attack_url>`
 
 [FFUF](github.com/ffuf/ffuf)
 
-`ffuf -c -w /usr/share/wordlists/dirs/directory-list-2.3-medium.txt -u https://squad.cyber.uq.edu.au/FUZZ`
+`ffuf -c -w <wordlist> -u <attack_url>/FUZZ`
 
 ## Reverse Engineering
 
