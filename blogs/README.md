@@ -32,6 +32,10 @@ Assorted blogs, magazines and general information websites
 
 [Malware Engineering 0x1](https://medium.com/@compilepeace/malware-engineering-part-0x1-that-magical-elf-5be3556ecb2b)
 
+## Miscellaneous
+
+[LANGSEC: Language Theoretic Security](langsec.org)
+
 ## Networking
 
 [Beej's Guide to Network Programming](https://beej.us/guide/bgnet/html/#structs)
