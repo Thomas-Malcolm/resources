@@ -8,11 +8,25 @@ Collection of websites with neat tools - useful for checking the work you're doi
 
 [Sorting Algorithm Visualiser](http://sorting.at/)
 
+## Cracking
+
+[Hash Cracking](https://crackstation.net/)
+
+## Decoding
+
+[Cyber Chef](https://gchq.github.io/CyberChef/)
+
 ## Design Stuff
 
 [Font Awesome](fontawesome.com)
 
 [Visualpharm - Icons](visualpharm.com/free-icons)
+
+## Disposables
+
+[Yopmail](yopmail.com/en/)
+
+[Phone Number](receive-smss.com)
 
 ## Programming
 
