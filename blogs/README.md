@@ -30,13 +30,13 @@ Assorted blogs, magazines and general information websites
 
 [Phrack Magazine](http://phrack.org/)
 
-[2600 Magazine](2600.com)
+[2600 Magazine](https://2600.com)
 
 [Thunderysteak](https://thunderysteak.github.io/)
 
 ## Hardware
 
-[Werwolv](werwolv.net/about)
+[Werwolv](https://werwolv.net/about)
 
 ## Malware
 
@@ -44,7 +44,7 @@ Assorted blogs, magazines and general information websites
 
 ## Miscellaneous
 
-[LANGSEC: Language Theoretic Security](langsec.org)
+[LANGSEC: Language Theoretic Security](https://langsec.org)
 
 [Differentiate Encrypted Files from Compressed Files](http://www.devttys0.com/2013/06/differentiate-encryption-from-compression-using-math/)
 
@@ -68,7 +68,7 @@ Assorted blogs, magazines and general information websites
 
 [Exploiting SUID Executables](https://www.pentestpartners.com/security-blog/exploiting-suid-executables/)
 
-[Google's Project Zero](googleprojectzero.blogspot.com)
+[Google's Project Zero](https://googleprojectzero.blogspot.com)
 
 [Quarkslab's Blog](https://blog.quarkslab.com/index.html)
 
