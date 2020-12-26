@@ -2,6 +2,10 @@
 
 Assorted blogs, magazines and general information websites
 
+## Android
+
+[Analysing Smali code](https://limbenjamin.com/articles/analysing-smali-code.html)
+
 ## Computer Science
 
 [CS Education Gaps](https://missing.csail.mit.edu/)
@@ -15,6 +19,8 @@ Assorted blogs, magazines and general information websites
 [VxWorks OS Based Router Reverse Engineer](https://blog.quarkslab.com/reverse-engineering-a-vxworks-os-based-router.html)
 
 [TP-Link TL-WA901ND Firmware Reverse Engineering](https://thunderysteak.github.io/thunderysteak.github.io/tl-wa901nd-basic-re.html)
+
+[D'link Proprietary Firmware Decryption](https://nstarke.github.io/0036-decrypting-dlink[proprietary-firmwaree-images.html])
 
 [/dev/ttys0](http://www.devttys0.com/)
 

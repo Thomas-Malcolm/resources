@@ -2,6 +2,10 @@
 
 Official documentations
 
+## Android
+
+[.DEX Format](https://source.android.com/devices/tech/dalvik/dex-format)
+
 ## File Format
 
 [File Signatures](https://www.garykessler.net/library/file_sigs.html)
