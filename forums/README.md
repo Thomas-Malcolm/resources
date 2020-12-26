@@ -2,8 +2,8 @@
 
 ## Game Research
 
-[Zenhax](zenhax.com)
+[Zenhax](https://zenhax.com)
 
 ### Notable
 
-[Identifying Compression Types](zenhax.com/viewtopic.php?f=4&t=27)
+[Identifying Compression Types](https://zenhax.com/viewtopic.php?f=4&t=27)
