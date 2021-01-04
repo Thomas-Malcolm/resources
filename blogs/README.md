@@ -48,6 +48,8 @@ Assorted blogs, magazines and general information websites
 
 [Malware Engineering 0x1](https://medium.com/@compilepeace/malware-engineering-part-0x1-that-magical-elf-5be3556ecb2b)
 
+[Red Teaming Experiments](https://ired.team)
+
 ## Miscellaneous
 
 [LANGSEC: Language Theoretic Security](https://langsec.org)
