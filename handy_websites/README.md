@@ -28,6 +28,10 @@ Collection of websites with neat tools - useful for checking the work you're doi
 
 [Phone Number](receive-smss.com)
 
+## Packages
+
+[JS packages](https://openbase.io/)
+
 ## Programming
 
 [x86/x64 Assembler and Disassembler](https://defuse.ca/online-x86-assembler.htm#disassembly2)

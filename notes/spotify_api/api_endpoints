@@ -1,0 +1,12 @@
+
+
+
+
+====================PLAYER====================
+method: PUT
+base_uri: https://api.spotify.com/v1/me/player
+
+endpoints (and options)
+/pause
+/play
+

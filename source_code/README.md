@@ -2,6 +2,10 @@
 
 Code for various things
 
+## Operating Systems
+
+[Kali](https://gitlab.com/kalilinux)
+
 ## Security
 
 [Malware Sample Source Code](https://github.com/vxunderground/MalwareSourceCode)

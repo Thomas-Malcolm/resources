@@ -1,6 +1,6 @@
 # Blogs
 
-Assorted blogs, magazines and general information websites
+Assorted blogs, magazines and general information websites. Effectively just community information sources. 
 
 ## Android
 
@@ -39,6 +39,10 @@ Assorted blogs, magazines and general information websites
 [2600 Magazine](https://2600.com)
 
 [Thunderysteak](https://thunderysteak.github.io/)
+
+## Grey Hat
+
+[Dumps and Example Red Hat Code](https://github.com/CaseAnon)
 
 ## Hardware
 

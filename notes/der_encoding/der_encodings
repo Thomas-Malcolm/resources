@@ -1,0 +1,234 @@
+ITU: International Telecommunication Union
+	- agency of the UN responsible for ICT issues
+ITU-T: Telecommunication Standardisation Sector of ITU
+	- maintains X.509
+
+
+==============BROAD_SPECTRUM_NOTES==============
+1 octet = 2 hex digits = 8 bits
+
+
+
+RFC5280 specifies part of standards for the X.509 Public Key Infrastructure (PKI)
+
+
+(https://cryptologie.net/article/260/asn1-vs-der-vs-pem-vs-x509-vs-pkcs7-vs/)
+
+X.509 : specifies a type of certificate 
+(https://tools.ietf.org/html/rfc5280#ref-X.509)
+	- an object with name of server, who signed, actual signature, etc.
+	* signature signed using an encryption standard (e.g. SHA1)
+
+
+X.680 : ASN.1 [Abstract Syntax Notation One] => Standardised X.509
+	- specified by X.680 (https://tools.ietf.org/html/rfc5280#ref-X.680)
+	- standard format for an X.509 certificate
+
+X.208 : specifies data encoding for ASN.1
+	- in https://www.itu.int/rec/T-REC-X.208-198811-W/en
+	- and https://tools.ietf.org/html/rfc6025
+	- contains tag values, their use, etc.
+
+
+==============ENCODINGS==============
+
+X.509 : Methods of encoding actual ASN.1 data
+	- specified by X.690 (https://tools.ietf.org/html/rfc5280#ref-X.690)
+	- specifies what bytes in file translate to in ASN.1 format
+	- defines ASN.1 encoding formats BER, CER, DER
+
+BER => CER, DER
+DER most preferred
+
+BER [Basic Encoding Rules] 
+
+CER [Canonical Encoding Rules]
+
+DER [Distinguished Encoding Rules]
+	- stricter BER
+	openssl x509 -inform der -in [file]
+
+	Certificate field specification:
+	(https://tools.ietf.org/html/rfc5280#page-16)
+
+	[key]
+	NAME   ::= TYPE {
+		DATA
+	}
+	[key]
+	
+	Certificate  ::=  SEQUENCE  {
+        tbsCertificate       TBSCertificate,
+        signatureAlgorithm   AlgorithmIdentifier,
+        signatureValue       BIT STRING  
+        }
+
+    
+   	TBSCertificate  ::=  SEQUENCE  {
+        version         [0]  EXPLICIT Version DEFAULT v1,
+        serialNumber         CertificateSerialNumber,
+        signature            AlgorithmIdentifier,
+        issuer               Name,
+        validity             Validity,
+        subject              Name,
+        subjectPublicKeyInfo SubjectPublicKeyInfo,
+        issuerUniqueID  [1]  IMPLICIT UniqueIdentifier OPTIONAL,
+                             -- If present, version MUST be v2 or v3
+		subjectUniqueID [2]  IMPLICIT UniqueIdentifier OPTIONAL,
+		                     -- If present, version MUST be v2 or v3
+		extensions      [3]  EXPLICIT Extensions OPTIONAL
+		                     -- If present, version MUST be v3
+		}
+
+	Version  ::=  INTEGER  {  v1(0), v2(1), v3(2)  }
+
+   	CertificateSerialNumber  ::=  INTEGER
+
+   	Validity ::= SEQUENCE {
+        notBefore      Time,
+        notAfter       Time }
+
+   	Time ::= CHOICE {
+        utcTime        UTCTime,
+        generalTime    GeneralizedTime }
+
+  	UniqueIdentifier  ::=  BIT STRING
+
+   	SubjectPublicKeyInfo  ::=  SEQUENCE  {
+        algorithm            AlgorithmIdentifier,
+        subjectPublicKey     BIT STRING  }
+
+   	Extensions  ::=  SEQUENCE SIZE (1..MAX) OF Extension
+
+  	 Extension  ::=  SEQUENCE  {
+        extnID      OBJECT IDENTIFIER,
+        critical    BOOLEAN DEFAULT FALSE,
+        extnValue   OCTET STRING
+                    -- contains the DER encoding of an ASN.1 value
+                    -- corresponding to the extension type identified
+                    -- by extnID
+        }
+
+
+[ID] | [LENGTH OCTETS] | [CONTENTS]
+
+[ID] [REFERENCE LINK]
+(b8		b7 		b6		b5		b4		b3		b2		b1)
+(Class 	    |	P/C  |	       Tag number                 )
+
+*to have more than one octet for tags (i.e. if tag no. >=31):
+	1) bit(8,7) of leading octet normal
+	2) bit(6) is 0, bit(5-1) are 1 in leading octet
+	3) for each subsequence octet, bit(8) = 1 and bit(7-1) add onto tag value
+	4) last octet used for tag has bit(8) = 0
+
+
+[LENGTH] = (b8 b7 b6 b5 b4 b3 b2 b1)
+* b8 : MSB (b7)
+* length is whole sub-sec length 	
+
+	- if PRIMITIVE:
+		- Short form if b8 is 0
+			- b7-b1 = size of object
+
+		- Long form if b8 is 1
+			- b7-b1 = no. length octets
+
+	- if INDEFINITE:
+		- indicate contents are terminated by end-of-contents octet
+==============X.509 Format==============
+RFC2459
+(https://tools.ietf.org/html/rfc2459)
+
+==============DER_FORMATTING==============
+X.690 specification for BER/CER/DER
+(https://www.itu.int/rec/T-REC-X.690-201508-I/en)
+
+- specifies rules for encoding
+- dictates octet structure
+	- identifier : length : content
+
+==============TEXT_FORMATTING==============
+RFC7468
+(https://tools.ietf.org/html/rfc7468)
+
+- many different text encodings with different hex meanings
+	- e.g. US-ASCII has specific encodings for different whitespaces
+	- can introduce inconsistencies when trying to decode/encode between systems with different textual encodings
+
+- RFC7468 specifies a standard for "textual encoding"
+
+common:
+	- LWSP : *(WSP / CRLF WSP)  : Linear white-space (allows lines w/ only white space)
+		- any number of spaces/tabs/newlines
+	- WSP  : SP / HTAB          : White space
+	- CRLF : CR LF				: Internet standard newline [Windows: CRLF, *nix: LF]
+	- SP   : 0x20				: Space
+	- HTAB : 0x09				: Horizontal tab
+	- CR   : 0x0D				: Carriage return
+	- LF   : 0x0A				: Linefeed
+
+notable:
+	- newline(eol): CRLF / CR / LF
+	- eolWSP      : WSP / CR / LF (end of line with whitespace - comparable to LWSP)
+	- 
+	- 
+
+
+
+Example Disassembly
+
+[id octet] | [len octet] | [content]
+
+02020dfc => Serial Number: 3850 (0x0dfc)
+id | ln | ct
+02 | 02 | 0dfc
+
+00000010 | 00000010 | (int) 0dfc = 3850
+
+id 0x02: Integer
+ln 0x02: content is two octets long
+
+
+
+
+308202da3082024302020dfc
+---------------
+[Certificate header]
+30 | 82 | 02 | da
+Certificate ::= SEQUENCE
+
+0x82 => 10000010 => 2 bytes used for length octets
+
+t.f. 02 | da => length octets
+
+0x02 + 0xda = 0xdc => 220 bytes
+
+certificate has initial sequence 220 bytes long
+----------------
+3082024302020dfc
+
+[Version?] => default is v1
+30 | 82 | 02 | 43
+
+class: 30 & 0xC0 => 0x00 => Universal
+type: 30 & 0x20 => 0x20 => Constructed
+tag: 30 & 1F => 0x10 => Enumerated type
+
+ln: 82 : 10010010 => two length octets
+0x02 + 0x43 = 0x45 => 69 bytes
+
+** IA5_STR => ASN.1 specific text encoding "ISO 646"
+----------------
+02020dfc
+
+02 | 02 | 0dfc
+serialNumber = 3580 (0x0dfc)
+
+
+
+
+
+
+
+300d06092a864886f70d0101050500 => Signature Algorithm?
