@@ -90,5 +90,9 @@ Assorted blogs, magazines and general information websites. Effectively just com
 
 [Encoding Web Shells in PNG IDAT Chunks](https://www.idontplaydarts.com/2012/06/encoding-web-shells-in-png-idat-chunks/)
 
+## Windows
+
+[Active Directory Security](https://adsecurity.org/)
+
 
 

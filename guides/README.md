@@ -14,6 +14,10 @@ How do you do these things?
 
 [Bash Script CLI Arguments](linuxcommand.org/lc3_wss0120.php)
 
+## Exploit Development
+
+[Getting Started with Exploit Development](https://dayzerosec.com/posts/getting-started/)
+
 ## Opcodes
 
 [Dalvik Opcodes](http://pallergabor.uw.hu/androidblog/dalvik_opcodes.html)
